@@ -1,0 +1,99 @@
+/* Define a cor de fundo do corpo e ajuste as margens */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilize o contêiner do chat */
+#chat {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilize a lista de mensagens do chat */
+#chat-messages {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* Estilize as mensagens individuais */
+#chat-messages li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #daf5d4;
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternar a cor de fundo das mensagens */
+#chat-messages li:nth-child(odd) {
+    background: #f0f0f0;
+}
+
+/* Estilize o formulário de entrada de mensagem */
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    background: #fafafa;
+}
+
+/* Estilize o campo de entrada de mensagem */
+#message-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    margin-right: 12px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#message-input:focus {
+    border-color: #5cb85c;
+}
+
+/* Estilize o botão de envio */
+#chat-form button {
+    background: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Alterar a cor do botão de envio ao passar o mouse */
+#chat-form button:hover {
+    background: #4cae4c;
+}
+
+/* Adicionar um efeito de transição suave às mensagens */
+#chat-messages li {
+    transition: transform 0.2s ease-in-out;
+}
+
+#chat-messages li:hover {
+    transform: scale(1.02);
+}
